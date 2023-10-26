@@ -1,0 +1,14 @@
+{
+  "kafka": {
+    "servers": ["10.17.4.242:19092"],
+    "topics": ["flows"],
+    "groupId": "metrics"
+  },
+  "exemplars": {
+    "port": 8000,
+    "enable": true,
+    "maxExemplars": 10000
+  },
+
+  "remoteUrl": "http://10.211.55.19:9090/api/v1/write"
+}
