@@ -7,15 +7,7 @@
 
 ### kafka消费端
 
-> 本项目使用的是腾讯的cKafka
-
-golang的kafka消费端需要用到`github.com/confluentinc/confluent-kafka-go/kafka`，使用该库之前需要[安装](https://github.com/confluentinc/confluent-kafka-go#installing-librdkafka)`librdkafka`库，但**不支持在Windows系统**上安装`librdkafka`。安装步骤如下：
-
-```
-git clone https://github.com/edenhill/librdkafka.gitcd librdkafka./configuremakesudo make install
-```
-
-> 环境上运行时可以考虑将`librdkafka`库编译到镜像中。如使用Alpine镜像时执行`apk add librdkafka-dev pkgconf`安装即可。[官方文档](https://github.com/confluentinc/confluent-kafka-go#using-go-modules)中有提到，如果使用Alpine Linux ，编译方式为：go build -tags musl ./...
+> 本项目使用 https://github.com/IBM/sarama
 
 ### Metrics的写入
 
